@@ -1,0 +1,94 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/juricakosic/Downloads/rubic-sdk-example-master 2/examples/react/package.json: Unexpected string in JSON at position 128
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "react",
+      "version": "1.0.4",
+      "description": "",
+      "main": "dist/index.js",
+      "license": "private"
+      "scripts": {
+          "start": "webpack serve --mode development --progress --hot --config ./webpack.config.development.js",
+          "build": "webpack --mode production --config ./webpack.config.production.js",
+          "deploy": "gh-pages -d dist",
+          "publish-demo": "yarn run build && yarn run deploy"
+      },
+      "keywords": [
+          "react",
+          "typescript",
+          "webpack",
+          "scss"
+      ],
+      "license": "MIT",
+      "dependencies": {
+          "@emotion/react": "^11.10.4",
+          "@emotion/styled": "^11.10.4",
+          "@mui/icons-material": "^5.10.3",
+          "@mui/joy": "^5.0.0-alpha.43",
+          "gh-pages": "^4.0.0",
+          "react": "^18.2.0",
+          "react-dom": "^18.2.0",
+          "react-scripts": "^5.0.1",
+          "rubic-sdk": "^2.13.1",
+          "use-async-effect": "^2.2.6"
+      },
+      "devDependencies": {
+          "@types/react": "^18.0.15",
+          "@types/react-dom": "^18.0.6",
+          "clean-webpack-plugin": "^4.0.0",
+          "copy-webpack-plugin": "^11.0.0",
+          "crypto-browserify": "^3.12.0",
+          "css-loader": "^6.7.1",
+          "file-loader": "^6.2.0",
+          "html-webpack-plugin": "^5.5.0",
+          "http-browserify": "^1.7.0",
+          "https-browserify": "^1.0.0",
+          "mini-css-extract-plugin": "^2.6.1",
+          "postcss": "^8.4.14",
+          "postcss-loader": "^7.0.1",
+          "postcss-preset-env": "^7.7.2",
+          "sass": "^1.53.0",
+          "sass-loader": "^13.0.2",
+          "stream-browserify": "^3.0.0",
+          "style-loader": "^3.3.1",
+          "terser-webpack-plugin": "^5.3.3",
+          "ts-loader": "^9.3.1",
+          "typescript": "^4.7.4",
+          "url": "^0.11.0",
+          "webpack": "^5.73.0",
+          "webpack-cli": "^4.10.0",
+          "react-error-overlay": "^6.0.9",
+          "webpack-dev-server": "^4.9.3"
+      },
+      "resolutions": {
+          "//": "See https://github.com/facebook/create-react-app/issues/11773",
+          "react-error-overlay": "^6.0.9"
+        }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -95,6 +95,9 @@ module.exports = (env, options) =>
                 process: 'process/browser',
               }),
             new MiniCssExtractPlugin({ filename: scssConfig.destFileName }),
+            new webpack.DefinePlugin({
+                'process.env.NODE_ENV': JSON.stringify('development')
+            }),
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 inject: true,
