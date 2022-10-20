@@ -91,6 +91,9 @@ module.exports = (env, options) =>
         plugins: [
             new CleanWebpackPlugin(),
             new CopyPlugin(copyPluginPatterns),
+            new webpack.ProvidePlugin({
+                process: 'process/browser',
+              }),
             new MiniCssExtractPlugin({ filename: scssConfig.destFileName }),
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
